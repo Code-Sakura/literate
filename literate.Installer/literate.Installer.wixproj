@@ -1,0 +1,16 @@
+<Project Sdk="WixToolset.Sdk/6.0.0">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <OutputType>Package</OutputType>
+    <PlatformTarget>x64</PlatformTarget>
+    <SuppressIces>ICE80</SuppressIces>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\literate\literate.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="WixToolset.UI.wixext" Version="6.0.0" />
+  </ItemGroup>
+</Project>
