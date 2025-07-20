@@ -52,6 +52,33 @@
         </RegistryKey>
         <RegistryValue Root="HKLM" Key="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Literate" Name="EstimatedSize" Type="integer" Value="1024" KeyPath="yes" />
       </Component>
+      
+      <Component Id="WebPContextMenuComponent" Directory="INSTALLFOLDER" Guid="{4E5F6A7B-8901-2345-A6B7-456789ABCDEF}">
+        <RegistryKey Root="HKCR" Key="SystemFileAssociations\.webp\shell\Open with Literate">
+          <RegistryValue Type="string" Value="Open with Literate" />
+          <RegistryValue Name="Icon" Type="string" Value="[INSTALLFOLDER]literate.exe,0" />
+          <RegistryValue Name="SupportedTypes" Type="string" Value=".webp" />
+        </RegistryKey>
+        <RegistryKey Root="HKCR" Key="SystemFileAssociations\.webp\shell\Open with Literate\command">
+          <RegistryValue Type="string" Value="&quot;[INSTALLFOLDER]literate.exe&quot; &quot;%1&quot;" />
+        </RegistryKey>
+        <RegistryValue Root="HKCR" Key="SystemFileAssociations\.webp\shell\Open with Literate" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+      
+      <Component Id="Windows11ContextMenuComponent" Directory="INSTALLFOLDER" Guid="{5F6A7B8C-9012-3456-B7C8-56789ABCDEF0}">
+        <RegistryKey Root="HKLM" Key="SOFTWARE\Classes\*\shell\Literate">
+          <RegistryValue Type="string" Value="Open with Literate" />
+          <RegistryValue Name="Icon" Type="string" Value="[INSTALLFOLDER]literate.exe,0" />
+          <RegistryValue Name="SupportedTypes" Type="string" Value=".webp" />
+        </RegistryKey>
+        <RegistryKey Root="HKLM" Key="SOFTWARE\Classes\*\shell\Literate\command">
+          <RegistryValue Type="string" Value="&quot;[INSTALLFOLDER]literate.exe&quot; &quot;%1&quot;" />
+        </RegistryKey>
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\*\shell\Literate" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+      
+      <ComponentRef Id="WebPContextMenuComponent" />
+      <ComponentRef Id="Windows11ContextMenuComponent" />
     </ComponentGroup>
   </Fragment>
 </Wix>
