@@ -13,4 +13,8 @@
   <ItemGroup>
     <PackageReference Include="WixToolset.UI.wixext" Version="6.0.0" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <Content Include="LiterateInstaller.wixproj" />
+  </ItemGroup>
 </Project>
